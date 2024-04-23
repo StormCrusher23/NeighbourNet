@@ -1,6 +1,4 @@
-// App.js
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { StyleSheet, Text, View, Button } from 'react-native';
@@ -12,7 +10,6 @@ const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text>Home Screen</Text>
-      <Button title='Open Drawer' onPress={() => navigation.openDrawer()} />
     </View>
   );
 };
@@ -36,15 +33,13 @@ const DrawerNavigator = () => {
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name='App'
-          component={DrawerNavigator}
-          options={{ headerShown: false }}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <Stack.Navigator>
+      <Stack.Screen
+        name='App'
+        component={DrawerNavigator}
+        options={{ headerShown: false }}
+      />
+    </Stack.Navigator>
   );
 }
 
