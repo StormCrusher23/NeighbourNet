@@ -9,7 +9,7 @@ const Drawer = createDrawerNavigator();
 const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <Text>Home Screen</Text>
+      <Text>Home asljd Screen</Text>
     </View>
   );
 };
